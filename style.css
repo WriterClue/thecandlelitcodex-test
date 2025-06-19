@@ -103,16 +103,13 @@ body {
     align-items: flex-start;
   }
 
-  .card-wrapper,
-  .welcome-message {
-    flex: 1;
-  }
-
   .card-wrapper {
+    flex: 1;
     align-items: flex-start;
   }
 
   .welcome-message {
+    flex: 1;
     margin-left: 2rem;
   }
 }
