@@ -87,12 +87,12 @@ body {
   display: block;
 }
 
-/* Welcome Statement - Glowing Version */
+/* Welcome Statement - Unified Glowing Version */
 .welcome-message {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1.2rem 2rem;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.3); /* Match container background */
   border: 2px solid #d4af37;
   backdrop-filter: blur(12px);
   border-radius: 20px;
@@ -102,7 +102,7 @@ body {
   font-style: italic;
   font-weight: 500;
   line-height: 1.6;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4), 0 0 30px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px rgba(212, 175, 55, 0.5);
 }
 
