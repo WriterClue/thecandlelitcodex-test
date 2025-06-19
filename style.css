@@ -82,6 +82,22 @@ body {
   display: block;
 }
 
+/* Welcome Statement */
+.welcome-message {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid #d4af37;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  text-align: center;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
 /* Navigation Cards */
 .card-wrapper {
   display: flex;
