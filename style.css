@@ -1,4 +1,4 @@
-/* Reset and Base */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* Sticky Contact Section */
+/* Sticky Contact Bar */
 .contact-card {
   position: sticky;
   top: 0;
@@ -70,7 +70,7 @@ body {
   color: #ffd700;
 }
 
-/* Banner Section */
+/* Banner */
 .banner {
   margin: 2rem auto;
   max-width: 800px;
@@ -88,16 +88,43 @@ body {
   display: block;
 }
 
-/* Navigation Cards Wrapper */
+/* Split Layout Section */
+.split-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .split-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .card-wrapper,
+  .welcome-message {
+    flex: 1;
+  }
+
+  .card-wrapper {
+    align-items: flex-start;
+  }
+
+  .welcome-message {
+    margin-left: 2rem;
+  }
+}
+
+/* Cards */
 .card-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2rem;
-  padding: 2rem 1rem;
+  align-items: center;
 }
 
-/* Navigation Cards */
 .container {
   background: rgba(0, 0, 0, 0.3);
   border: 2px solid #d4af37;
@@ -115,7 +142,6 @@ body {
   box-shadow: 0 0 25px rgba(212, 175, 55, 0.7), 0 0 50px rgba(212, 175, 55, 0.5);
 }
 
-/* Titles */
 .title {
   font-family: 'Caveat', cursive;
   font-size: 2rem;
@@ -124,14 +150,12 @@ body {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
-/* Subtitles */
 .subtitle {
   font-size: 1.05rem;
   margin: 0.5rem 0 1.5rem;
   color: #fdf6d7;
 }
 
-/* Buttons */
 .btn {
   background: #f4e3cf;
   color: #2a2a2a;
@@ -146,4 +170,20 @@ body {
 
 .btn:hover {
   box-shadow: 0 0 20px rgba(244, 227, 207, 0.6), 0 0 30px rgba(244, 227, 207, 0.4);
+}
+
+/* Welcome Message */
+.welcome-message {
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid #d4af37;
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  color: #fff9e2;
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.6;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px rgba(212, 175, 55, 0.5);
 }
