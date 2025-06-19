@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +9,8 @@ body {
   font-family: 'Playfair Display', serif;
   background: url('https://images.unsplash.com/photo-1525615830251-36561ffc9f04?w=800&auto=format&fit=crop&q=60') no-repeat center center fixed;
   background-size: cover;
-  color: white;
+  color: #fdfaf5; /* Global soft ivory color */
+  line-height: 1.6;
 }
 
 /* Contact Section */
@@ -16,12 +18,11 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.3);
   border: 2px solid #d4af37;
   backdrop-filter: blur(12px);
   padding: 1rem 2rem;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  position: relative;
 }
 
 .contact-left {
@@ -41,6 +42,7 @@ body {
 .name {
   font-family: 'Caveat', cursive;
   font-size: 2rem;
+  color: #fffbe8;
 }
 
 .info {
@@ -55,7 +57,7 @@ body {
 }
 
 .social-icons a {
-  color: white;
+  color: #fff8dd;
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
@@ -69,7 +71,7 @@ body {
   margin: 2rem auto;
   max-width: 800px;
   width: 90%;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.3);
   border: 2px solid #d4af37;
   backdrop-filter: blur(12px);
   border-radius: 20px;
@@ -86,16 +88,17 @@ body {
 .welcome-message {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.08);
+  padding: 1.2rem 2rem;
+  background: rgba(255, 255, 255, 0.12);
   border: 2px solid #d4af37;
   backdrop-filter: blur(10px);
   border-radius: 20px;
   text-align: center;
-  font-style: italic;
-  color: #ffffff;
+  color: #fffbe8;
   font-size: 1.1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 /* Navigation Cards */
@@ -108,7 +111,7 @@ body {
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.3);
   border: 2px solid #d4af37;
   border-radius: 30px;
   padding: 2rem;
@@ -123,13 +126,13 @@ body {
   font-family: 'Caveat', cursive;
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: white;
+  color: #fff9e2;
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin: 0.5rem 0 1.5rem;
-  color: #f0f0f0;
+  color: #fdf6d7;
 }
 
 .btn {
@@ -140,4 +143,5 @@ body {
   font-weight: bold;
   border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-size: 0.95rem;
 }
