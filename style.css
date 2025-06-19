@@ -145,3 +145,44 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   font-size: 0.95rem;
 }
+
+/* Glowing outline for cards */
+.container {
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #d4af37;
+  border-radius: 30px;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Glowing on hover */
+.container:hover {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.7), 0 0 50px rgba(212, 175, 55, 0.5);
+}
+
+/* Glowing Enter button */
+.btn {
+  background: #f4e3cf;
+  color: #2a2a2a;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(244, 227, 207, 0.4), 0 0 20px rgba(244, 227, 207, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px rgba(244, 227, 207, 0.6), 0 0 30px rgba(244, 227, 207, 0.4);
+}
+
+/* Glowing titles */
+.title,
+.name {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(212, 175, 55, 0.5);
+}
