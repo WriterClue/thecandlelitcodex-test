@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* Sticky Contact Bar */
+/* Sticky Contact Section */
 .contact-card {
   position: sticky;
   top: 0;
@@ -70,7 +70,7 @@ body {
   color: #ffd700;
 }
 
-/* Banner */
+/* Banner Section */
 .banner {
   margin: 2rem auto;
   max-width: 800px;
@@ -88,40 +88,35 @@ body {
   display: block;
 }
 
-/* Split Layout Section */
-.split-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
+/* Welcome Statement */
+.welcome-message {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid #d4af37;
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  text-align: center;
+  color: #fff9e2;
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.7;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px rgba(212, 175, 55, 0.5);
 }
 
-@media (min-width: 768px) {
-  .split-wrapper {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .card-wrapper {
-    flex: 1;
-    align-items: flex-start;
-  }
-
-  .welcome-message {
-    flex: 1;
-    margin-left: 2rem;
-  }
-}
-
-/* Cards */
+/* Navigation Cards */
 .card-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
 }
 
+/* Card Style */
 .container {
   background: rgba(0, 0, 0, 0.3);
   border: 2px solid #d4af37;
@@ -167,20 +162,4 @@ body {
 
 .btn:hover {
   box-shadow: 0 0 20px rgba(244, 227, 207, 0.6), 0 0 30px rgba(244, 227, 207, 0.4);
-}
-
-/* Welcome Message */
-.welcome-message {
-  background: rgba(0, 0, 0, 0.45);
-  border: 2px solid #d4af37;
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 1.5rem;
-  color: #fff9e2;
-  font-size: 1.05rem;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 1.6;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px rgba(212, 175, 55, 0.5);
 }
