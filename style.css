@@ -93,12 +93,12 @@ body {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1.2rem 2rem;
-  background: rgba(0, 0, 0, 0.45); /* Darker glass effect */
+  background: rgba(0, 0, 0, 0.3); /* Darker glass effect */
   border: 2px solid #d4af37;
   backdrop-filter: blur(12px);
   border-radius: 20px;
   text-align: center;
-  color: #fffbe8;
+  color: #fff9e2;
   font-size: 1.1rem;
   font-style: italic;
   font-weight: 500;
