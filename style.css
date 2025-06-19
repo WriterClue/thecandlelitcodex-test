@@ -90,7 +90,7 @@ body {
 
 /* Welcome Statement - Styled and Sized Like Subtitle */
 .welcome-message {
-  max-width: 720px;
+  max-width: 400px;
   margin: 2rem auto;
   padding: 1rem 1.5rem;
   background: rgba(0, 0, 0, 0.45);
