@@ -1,4 +1,4 @@
-
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ body {
   font-family: 'Playfair Display', serif;
   background: url('https://images.unsplash.com/photo-1525615830251-36561ffc9f04?w=800&auto=format&fit=crop&q=60') no-repeat center center fixed;
   background-size: cover;
-  color: #fdfaf5; /* Global soft ivory color */
+  color: #fdfaf5;
   line-height: 1.6;
 }
 
@@ -25,7 +25,7 @@ body {
   border: 2px solid #d4af37;
   backdrop-filter: blur(12px);
   padding: 1rem 2rem;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .contact-left {
@@ -46,6 +46,7 @@ body {
   font-family: 'Caveat', cursive;
   font-size: 2rem;
   color: #fffbe8;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
 .info {
@@ -79,7 +80,7 @@ body {
   backdrop-filter: blur(12px);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .banner img {
@@ -87,12 +88,12 @@ body {
   display: block;
 }
 
-/* Welcome Statement - Unified Glowing Version */
+/* Welcome Statement */
 .welcome-message {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1.2rem 2rem;
-  background: rgba(0, 0, 0, 0.3); /* Match container background */
+  background: rgba(0, 0, 0, 0.3);
   border: 2px solid #d4af37;
   backdrop-filter: blur(12px);
   border-radius: 20px;
@@ -115,43 +116,7 @@ body {
   padding: 2rem 1rem;
 }
 
-.container {
-  background: rgba(0, 0, 0, 0.3);
-  border: 2px solid #d4af37;
-  border-radius: 30px;
-  padding: 2rem;
-  text-align: center;
-  width: 100%;
-  max-width: 400px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-
-.title {
-  font-family: 'Caveat', cursive;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #fff9e2;
-}
-
-.subtitle {
-  font-size: 1.05rem;
-  margin: 0.5rem 0 1.5rem;
-  color: #fdf6d7;
-}
-
-.btn {
-  background: #f4e3cf;
-  color: #2a2a2a;
-  padding: 0.6rem 1.2rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  font-size: 0.95rem;
-}
-
-/* Glowing outline for cards */
+/* Card Style */
 .container {
   background: rgba(0, 0, 0, 0.3);
   border: 2px solid #d4af37;
@@ -165,12 +130,26 @@ body {
   transition: box-shadow 0.3s ease;
 }
 
-/* Glowing on hover */
 .container:hover {
   box-shadow: 0 0 25px rgba(212, 175, 55, 0.7), 0 0 50px rgba(212, 175, 55, 0.5);
 }
 
-/* Glowing Enter button */
+/* Title & Subtitle */
+.title {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff9e2;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  margin: 0.5rem 0 1.5rem;
+  color: #fdf6d7;
+}
+
+/* Button */
 .btn {
   background: #f4e3cf;
   color: #2a2a2a;
@@ -178,16 +157,11 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 30px;
+  font-size: 0.95rem;
   box-shadow: 0 0 10px rgba(244, 227, 207, 0.4), 0 0 20px rgba(244, 227, 207, 0.2);
   transition: box-shadow 0.3s ease;
 }
 
 .btn:hover {
   box-shadow: 0 0 20px rgba(244, 227, 207, 0.6), 0 0 30px rgba(244, 227, 207, 0.4);
-}
-
-/* Glowing titles */
-.title,
-.name {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(212, 175, 55, 0.5);
 }
