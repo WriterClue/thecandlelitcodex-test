@@ -88,21 +88,21 @@ body {
   display: block;
 }
 
-/* Welcome Statement */
+/* Welcome Statement - Responsive & Elegant */
 .welcome-message {
-  max-width: 800px;
+  max-width: 720px;
   margin: 2rem auto;
-  padding: 1.2rem 2rem;
-  background: rgba(0, 0, 0, 0.3); /* Darker glass effect */
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.45); /* Slightly darker for legibility */
   border: 2px solid #d4af37;
   backdrop-filter: blur(12px);
   border-radius: 20px;
   text-align: center;
   color: #fff9e2;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.2vw, 1.1rem); /* Responsive font size */
   font-style: italic;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.7;
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px rgba(212, 175, 55, 0.5);
 }
