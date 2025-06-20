@@ -111,35 +111,6 @@ body {
   border: 1px solid #d4af37;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
-  /* Simulated torn top edge */
-  position: relative;
-  clip-path: polygon(
-    0 10px,
-    10px 0,
-    30px 15px,
-    50px 0,
-    70px 15px,
-    90px 0,
-    110px 15px,
-    130px 0,
-    150px 15px,
-    170px 0,
-    190px 15px,
-    210px 0,
-    230px 15px,
-    250px 0,
-    270px 15px,
-    290px 0,
-    310px 15px,
-    330px 0,
-    350px 15px,
-    370px 0,
-    100% 15px,
-    100% 100%,
-    0 100%
-  );
-}
-
 /* Navigation Cards */
 .card-wrapper {
   display: flex;
