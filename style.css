@@ -88,36 +88,56 @@ body {
   display: block;
 }
 
-/* Welcome Statement - Paper Style (Smaller & Fixed Width) */
+/* Welcome Message - Torn Lined Paper Style */
 .welcome-message {
-  position: relative;
   width: 90%;
-  max-width: 550px; /* Prevents it from getting too wide on desktop */
+  max-width: 550px;
   margin: 2rem auto;
-  padding: 1rem 1.25rem;
-  background: #fffef8; /* Paper-like color */
+  padding: 1.5rem 1.25rem;
+  background: repeating-linear-gradient(
+    to bottom,
+    #fffdf5,
+    #fffdf5 24px,
+    #eae7dc 25px
+  );
   color: #2a2a2a;
-  font-size: 0.88rem; /* Smaller text */
+  font-size: 0.9rem;
   font-style: italic;
   font-weight: 500;
   line-height: 1.6;
   text-align: left;
-  border-radius: 4px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  border-radius: 0 0 6px 6px;
   font-family: 'Playfair Display', serif;
-}
+  border: 1px solid #d4af37;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
-/* Folded corner effect */
-.welcome-message::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 35px;
-  height: 35px;
-  background: linear-gradient(135deg, #f0eacb 0%, #fffef8 100%);
-  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-  box-shadow: -2px 2px 4px rgba(0,0,0,0.1);
+  /* Simulated torn top edge */
+  position: relative;
+  clip-path: polygon(
+    0 10px,
+    10px 0,
+    30px 15px,
+    50px 0,
+    70px 15px,
+    90px 0,
+    110px 15px,
+    130px 0,
+    150px 15px,
+    170px 0,
+    190px 15px,
+    210px 0,
+    230px 15px,
+    250px 0,
+    270px 15px,
+    290px 0,
+    310px 15px,
+    330px 0,
+    350px 15px,
+    370px 0,
+    100% 15px,
+    100% 100%,
+    0 100%
+  );
 }
 
 /* Navigation Cards */
