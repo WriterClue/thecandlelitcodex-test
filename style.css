@@ -88,23 +88,36 @@ body {
   display: block;
 }
 
-/* Welcome Statement */
+/* Welcome Statement - Paper Style (Smaller & Fixed Width) */
 .welcome-message {
-  max-width: 800px;
+  position: relative;
+  width: 90%;
+  max-width: 550px; /* Prevents it from getting too wide on desktop */
   margin: 2rem auto;
-  padding: 1rem 1.5rem;
-  background: rgba(0, 0, 0, 0.45);
-  border: 2px solid #d4af37;
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  text-align: center;
-  color: #fff9e2;
-  font-size: 1.05rem;
+  padding: 1rem 1.25rem;
+  background: #fffef8; /* Paper-like color */
+  color: #2a2a2a;
+  font-size: 0.88rem; /* Smaller text */
   font-style: italic;
   font-weight: 500;
-  line-height: 1.7;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px rgba(212, 175, 55, 0.5);
+  line-height: 1.6;
+  text-align: left;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  font-family: 'Playfair Display', serif;
+}
+
+/* Folded corner effect */
+.welcome-message::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #f0eacb 0%, #fffef8 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  box-shadow: -2px 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Navigation Cards */
