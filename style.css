@@ -88,12 +88,12 @@ body {
   display: block;
 }
 
-/* Welcome Message - Torn Paper */
+/* Welcome Message - Torn Paper Style */
 .welcome-message {
-  width: 90%;
-  max-width: 550px;
+  width: 85%;
+  max-width: 460px;
   margin: 2rem auto;
-  padding: 1.5rem 1.25rem 2rem;
+  padding: 1.25rem 1.25rem 2rem;
   background: repeating-linear-gradient(
     to bottom,
     #fffdf5,
@@ -101,7 +101,7 @@ body {
     #eae7dc 25px
   );
   color: #2a2a2a;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-style: italic;
   font-weight: 500;
   line-height: 1.6;
@@ -134,14 +134,14 @@ body {
   padding: 2rem 1rem 4rem;
 }
 
-/* Card Style */
+/* Individual Card */
 .container {
   background: rgba(0, 0, 0, 0.3);
   border: 2px solid #d4af37;
   border-radius: 30px;
   padding: 2rem;
   text-align: center;
-  width: 100%;
+  width: 90%;
   max-width: 400px;
   backdrop-filter: blur(12px);
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
