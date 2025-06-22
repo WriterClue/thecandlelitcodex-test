@@ -30,6 +30,15 @@ body {
   flex-wrap: wrap;
 }
 
+/* Site Title */
+.site-title {
+  font-family: 'Rustic Roadway', cursive;
+  font-size: 2.2rem;
+  color: #fffbe8;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+/* Avatar + Name + Icons */
 .contact-left {
   display: flex;
   align-items: center;
@@ -72,18 +81,9 @@ body {
   color: #ffd700;
 }
 
-.site-title {
-  font-family: 'Rustic Roadway', cursive;
-  font-size: 2rem;
-  color: #fff8dd;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 15px rgba(212, 175, 55, 0.5);
-  margin-left: auto;
-  white-space: nowrap;
-}
-
 /* Banner Section */
 .banner {
-  margin: 2rem auto;
+  margin: 2rem auto 0 auto;
   max-width: 800px;
   width: 90%;
   background: rgba(0, 0, 0, 0.3);
@@ -99,12 +99,12 @@ body {
   display: block;
 }
 
-/* Welcome Message */
+/* Welcome Message - Torn Lined Paper Style */
 .welcome-message {
-  width: 90%;
-  max-width: 550px;
+  width: 88%;
+  max-width: 520px;
   margin: 2rem auto;
-  padding: 1.25rem 1.25rem 2rem;
+  padding: 1.2rem 1rem 2rem;
   background: repeating-linear-gradient(
     to bottom,
     #fffdf5,
@@ -112,7 +112,7 @@ body {
     #eae7dc 25px
   );
   color: #2a2a2a;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-style: italic;
   font-weight: 500;
   line-height: 1.6;
@@ -190,4 +190,33 @@ body {
 
 .btn:hover {
   box-shadow: 0 0 20px rgba(244, 227, 207, 0.6), 0 0 30px rgba(244, 227, 207, 0.4);
+}
+
+/* Responsive: Site title above avatar + name */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .site-title {
+    order: -1;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-left {
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .info {
+    align-items: center;
+  }
 }
