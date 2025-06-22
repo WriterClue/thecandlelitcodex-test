@@ -74,9 +74,10 @@ body {
 
 .site-title {
   font-family: 'Rustic Roadway', cursive;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #fff8dd;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 15px rgba(212, 175, 55, 0.5);
+  margin-left: auto;
   white-space: nowrap;
 }
 
@@ -98,10 +99,10 @@ body {
   display: block;
 }
 
-/* Welcome Message - Torn Lined Paper Style */
+/* Welcome Message */
 .welcome-message {
   width: 90%;
-  max-width: 500px;
+  max-width: 550px;
   margin: 2rem auto;
   padding: 1.25rem 1.25rem 2rem;
   background: repeating-linear-gradient(
