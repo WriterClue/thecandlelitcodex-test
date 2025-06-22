@@ -1,3 +1,8 @@
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Caveat&display=swap');
+@import url('https://fonts.cdnfonts.com/css/rustic-roadway');
+
 /* Reset and Base */
 * {
   margin: 0;
@@ -30,7 +35,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Site Title */
 .site-title {
   font-family: 'Rustic Roadway', cursive;
   font-size: 2.2rem;
@@ -38,7 +42,6 @@ body {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
-/* Avatar + Name + Icons */
 .contact-left {
   display: flex;
   align-items: center;
@@ -101,10 +104,10 @@ body {
 
 /* Welcome Message - Torn Lined Paper Style */
 .welcome-message {
-  width: 88%;
-  max-width: 520px;
+  width: 90%;
+  max-width: 550px;
   margin: 2rem auto;
-  padding: 1.2rem 1rem 2rem;
+  padding: 1.25rem 1.25rem 2rem;
   background: repeating-linear-gradient(
     to bottom,
     #fffdf5,
@@ -112,7 +115,7 @@ body {
     #eae7dc 25px
   );
   color: #2a2a2a;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-style: italic;
   font-weight: 500;
   line-height: 1.6;
@@ -192,7 +195,7 @@ body {
   box-shadow: 0 0 20px rgba(244, 227, 207, 0.6), 0 0 30px rgba(244, 227, 207, 0.4);
 }
 
-/* Responsive: Site title above avatar + name */
+/* Responsive: Move site title above avatar and name on small screens */
 @media (max-width: 768px) {
   .contact-card {
     flex-direction: column;
@@ -204,8 +207,8 @@ body {
     order: -1;
     width: 100%;
     text-align: center;
+    margin: 0;
     font-size: 1.8rem;
-    margin-bottom: 0.5rem;
   }
 
   .contact-left {
