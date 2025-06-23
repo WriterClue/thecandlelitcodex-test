@@ -18,10 +18,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
   observer.observe(trigger);
 });
-
-  window.addEventListener('load', () => {
-    const loader = document.getElementById('loader-wrapper');
-    setTimeout(() => {
-      loader.style.display = 'none';
-    }, 100); // 10 seconds
-  });
