@@ -207,7 +207,7 @@ body {
   color: #fff9e2;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: visible;
 }
 
 .subtitle {
