@@ -201,9 +201,12 @@ body {
 
 .title {
   font-family: 'Caveat', cursive;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem; /* larger but still one line */
+  margin-bottom: 0.3rem;
   color: #fff9e2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .subtitle {
