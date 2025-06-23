@@ -23,5 +23,5 @@ document.addEventListener('DOMContentLoaded', function () {
     const loader = document.getElementById('loader-wrapper');
     setTimeout(() => {
       loader.style.display = 'none';
-    }, 10000); // 10 seconds
+    }, 100); // 10 seconds
   });
