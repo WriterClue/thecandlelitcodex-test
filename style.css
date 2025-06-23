@@ -260,7 +260,7 @@ body {
 
 /* Invisible trigger element for scroll observer */
 #header-trigger {
-  height: 1px;
+  height: 2px;
 }
 
 /* Responsive Adjustments */
