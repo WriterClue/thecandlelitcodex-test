@@ -258,6 +258,11 @@ body {
   box-shadow: 0 0 20px rgba(244, 227, 207, 0.6), 0 0 30px rgba(244, 227, 207, 0.4);
 }
 
+/* Invisible trigger element for scroll observer */
+#header-trigger {
+  height: 1px;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .contact-card {
