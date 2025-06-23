@@ -309,8 +309,7 @@ body {
 }
 
 
-/* Loader Background + Book Flip */
-
+/* Fullscreen loader wrapper centered */
 #loader-wrapper {
   position: fixed;
   top: 0;
@@ -320,33 +319,33 @@ body {
   background: #f3e5d0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start; /* changed from center */
-  padding-top: 120px; /* moves it down */
   z-index: 9999;
 }
 
+/* Book Loader Container */
 .book {
   position: relative;
-  margin: 0 auto;
   width: 100px;
   height: 60px;
-  border: 5px solid #5a3e2b;
+  border: 4px solid #5a3e2b; /* darker brown for contrast */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Book Pages Animation */
 .book__page {
   position: absolute;
   left: 50%;
   top: -5px;
-  margin: 0 auto;
+  transform-origin: 0% 50%;
   width: 50px;
   height: 60px;
+  margin: 0 auto;
   background: #f3e5d0;
-  border-top: 5px solid #8b5e3c;
-  border-bottom: 5px solid #8b5e3c;
-  border-right: 5px solid #8b5e3c;
-  transform-origin: 0% 50%;
+  border-top: 4px solid #8b5e3c;
+  border-bottom: 4px solid #8b5e3c;
+  border-right: 4px solid #8b5e3c;
   animation: flip 1.2s infinite linear;
   animation-fill-mode: forwards;
 }
@@ -364,38 +363,37 @@ body {
   animation-delay: 4.2s;
 }
 
+/* Flip Animation Keyframes */
 @keyframes flip {
   0% {
     transform: perspective(600px) rotateY(0deg);
   }
-  20%, 29.9% {
-    background: #e0c8a5;
+  20% {
+    background: #dec2a0;
+  }
+  29.9% {
+    background: #dec2a0;
   }
   30% {
     transform: perspective(200px) rotateY(-90deg);
     background: #f3e5d0;
-  }
-  54.999% {
-    opacity: 1;
   }
   55% {
     opacity: 0;
   }
   60% {
     transform: perspective(200px) rotateY(-180deg);
-    background: #f3e5d0;
   }
   100% {
     transform: perspective(200px) rotateY(-180deg);
-    background: #f3e5d0;
   }
 }
 
 /* Flickering Text */
 .loader-text {
-  margin-top: 30px;
+  margin-top: 20px;
   font-family: 'Caveat', cursive;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #5a3e2b;
   animation: flicker 1s infinite;
 }
