@@ -83,6 +83,30 @@ body {
   color: #ffd700;
 }
 
+/* Shrinking header when scrolled */
+.contact-card.shrink {
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease;
+  border: 2px solid #d4af37;
+}
+
+/* Hide the left side (avatar, name, socials) */
+.contact-card.shrink .contact-left {
+  display: none;
+}
+
+/* Style the site title when shrunk */
+.contact-card.shrink .site-title {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.3rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
 /* Banner Section */
 .banner {
   margin: 2rem auto 0 auto;
