@@ -1,15 +1,20 @@
-// ===== Scroll-triggered Sticky Header Animation =====
-// This script makes the header shrink and hide the avatar + socials
-// while keeping the site title enclosed in an oblong-shaped header.
-
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.contact-card');
+  const trigger = document.getElementById('header-trigger');
 
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 130) {
-      header.classList.add('shrink');
-    } else {
-      header.classList.remove('shrink');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        header.classList.remove('shrink');
+      } else {
+        header.classList.add('shrink');
+      }
+    },
+    {
+      root: null,
+      threshold: 0,
     }
-  });
+  );
+
+  observer.observe(trigger);
 });
