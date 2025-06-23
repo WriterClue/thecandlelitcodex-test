@@ -19,12 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
   observer.observe(trigger);
 });
 
-
-<script>
   window.addEventListener('load', () => {
     const loader = document.getElementById('loader-wrapper');
     setTimeout(() => {
       loader.style.display = 'none';
     }, 10000); // 10 seconds
   });
-<script>
