@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.contact-card');
   const trigger = document.getElementById('header-trigger');
