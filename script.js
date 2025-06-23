@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Loader delay (20 seconds)
-window.addEventListener('load', () => {
-  const loader = document.getElementById('loader');
-  setTimeout(() => {
-    loader.style.display = 'none';
-  }, 20000); // 20 seconds
-});
+<script>
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader-wrapper');
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 20000); // 20 seconds
+  });
+<script>
