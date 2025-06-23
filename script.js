@@ -2,12 +2,14 @@
 // This script makes the header shrink and hide the avatar + socials
 // while keeping the site title enclosed in an oblong-shaped header.
 
-const header = document.querySelector('.contact-card');
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.contact-card');
 
-window.addEventListener('scroll', function () {
-  if (window.scrollY > 3) {
-    header.classList.add('shrink');
-  } else {
-    header.classList.remove('shrink');
-  }
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 3) {
+      header.classList.add('shrink');
+    } else {
+      header.classList.remove('shrink');
+    }
+  });
 });
