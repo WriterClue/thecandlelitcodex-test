@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.contact-card');
   const trigger = document.getElementById('header-trigger');
@@ -18,4 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
   );
 
   observer.observe(trigger);
+});
+
+
+// Loader delay (50 seconds)
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  setTimeout(() => {
+    loader.style.display = 'none';
+  }, 50000); // 50 seconds in milliseconds
 });
