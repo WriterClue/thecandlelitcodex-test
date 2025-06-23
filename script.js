@@ -5,7 +5,7 @@
 const header = document.querySelector('.contact-card');
 
 window.addEventListener('scroll', function () {
-  if (window.scrollY > 80) {
+  if (window.scrollY > 3) {
     header.classList.add('shrink');
   } else {
     header.classList.remove('shrink');
