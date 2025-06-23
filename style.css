@@ -182,9 +182,9 @@ body {
   background: rgba(0, 0, 0, 0.3);
   border: 2px solid #d4af37;
   border-radius: 10px;
-  padding: 1rem;
-  width: 120px;
-  min-height: 260px;
+  padding: 1.5rem;
+  width: 160px; /* wider for desktop */
+  min-height: 280px;
   text-align: center;
   backdrop-filter: blur(12px);
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
