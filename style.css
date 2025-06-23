@@ -130,27 +130,37 @@ body {
   background-size: 20px 20px;
 }
 
-/* Shelf Section Header */
-.shelf-section {
-  margin-top: 4rem;
+/* SHELF Section - Full Width Like Contact Card */
+.shelf-card {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #d4af37;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 1.2rem 2rem;
+  margin: 2rem 0;
   text-align: center;
-  padding: 0 1rem;
+}
+
+.shelf-content {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .shelf-header {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: 'Rustic Roadway', cursive;
   color: #fff9e2;
+  margin-bottom: 0.5rem;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
 .shelf-subtitle {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #f8edd4;
   font-style: italic;
-  max-width: 700px;
-  margin: 0.5rem auto 2rem;
-  line-height: 1.5;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.4;
 }
 
 /* Navigation Cards as Book Spines */
