@@ -338,7 +338,7 @@ body {
   left: 50%;
   top: -5px;
   transform-origin: 0% 50%;
-  background: #f3e5d0;
+  background: transparent;
   width: 50px;
   height: 60px;
   border-top: 5px solid #8b5e3c;
