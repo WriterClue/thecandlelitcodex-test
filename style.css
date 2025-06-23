@@ -332,6 +332,18 @@ body {
   position: relative;
 }
 
+.book {
+  position: relative;
+  z-index: 2; /* Make sure it's above background */
+  margin: 0 auto;
+  width: 100px;
+  height: 60px;
+  border: 4px solid #5a3e2b; /* Dark brown border */
+  border-radius: 6px;
+  background-color: rgba(243, 229, 208, 0.8); /* Optional: subtle background */
+  box-shadow: 0 0 10px rgba(90, 62, 43, 0.5); /* Give it depth */
+}
+
 /* Book pages */
 .book__page {
   position: absolute;
