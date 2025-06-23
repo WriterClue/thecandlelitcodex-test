@@ -317,22 +317,22 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #f3e5d0; /* cream brown */
+  background: #f3e5d0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* changed from center */
+  padding-top: 120px; /* moves it down */
   z-index: 9999;
 }
 
 .book {
-  top: 50%;
-  transform: translateY(-50%);
   position: relative;
   margin: 0 auto;
-  border: 5px solid #e9d8bc;
   width: 100px;
   height: 60px;
+  border: 5px solid #5a3e2b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .book__page {
@@ -340,12 +340,12 @@ body {
   left: 50%;
   top: -5px;
   margin: 0 auto;
+  width: 50px;
+  height: 60px;
+  background: #f3e5d0;
   border-top: 5px solid #8b5e3c;
   border-bottom: 5px solid #8b5e3c;
   border-right: 5px solid #8b5e3c;
-  background: #f3e5d0;
-  width: 50px;
-  height: 60px;
   transform-origin: 0% 50%;
   animation: flip 1.2s infinite linear;
   animation-fill-mode: forwards;
@@ -393,12 +393,11 @@ body {
 
 /* Flickering Text */
 .loader-text {
-  margin-top: 1rem;
+  margin-top: 30px;
   font-family: 'Caveat', cursive;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #5a3e2b;
   animation: flicker 1s infinite;
-  letter-spacing: 1px;
 }
 
 @keyframes flicker {
