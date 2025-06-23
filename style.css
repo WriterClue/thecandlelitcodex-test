@@ -151,18 +151,20 @@ body {
 
 .shelf-header {
   font-family: 'Rustic Roadway', cursive;
-  font-size: 1.8rem;
+  font-size: 1.5rem; /* was 1.8rem or larger */
   color: #fffbe8;
-  margin-bottom: 0.4rem;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px rgba(212, 175, 55, 0.5);
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 10px rgba(212, 175, 55, 0.4);
 }
 
 .shelf-subtitle {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 0.9rem;
   color: #fdf6d7;
   font-style: italic;
   line-height: 1.4;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Navigation Cards */
