@@ -18,3 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   observer.observe(trigger);
 });
+
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader-wrapper');
+  if (loader) {
+    loader.style.display = 'none';
+  }
+});
