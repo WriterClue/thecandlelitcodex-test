@@ -309,88 +309,92 @@ body {
 }
 
 
+/* Loader Wrapper Styles */
 #loader-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUybnBjeTJoNjUwOXN3aG1vaDBjejc5YTc3eGE3MWF2eTg5dHVuMGtjYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rdsYO4Wp1Lmouey1Va/giphy.gif') center center no-repeat;
+  background: url('https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUybnBjeTJoNjUwOXN3aG1vaDBjejc5YTc3eGE3MWF2eTg5dHVuMGtjYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rdsYO4Wp1Lmouey1Va/giphy.gif') no-repeat center center;
   background-size: cover;
-  z-index: 9999;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
-/* Book container */
-#loader {
-  width: 100px;
-  height: 60px;
-  position: relative;
+/* Loader Animation */
+.loader {
+  --c1: #673b14;
+  --c2: #f8b13b;
+  width: 40px;
+  height: 80px;
+  border-top: 4px solid var(--c1);
+  border-bottom: 4px solid var(--c1);
+  background: linear-gradient(90deg, var(--c1) 2px, var(--c2) 0 5px, var(--c1) 0) 50% / 7px 8px no-repeat;
+  display: grid;
+  overflow: hidden;
+  animation: l5-0 2s infinite linear;
 }
 
-.book {
-  position: relative;
-  z-index: 2; /* Make sure it's above background */
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  width: 75%;
+  height: calc(50% - 4px);
   margin: 0 auto;
-  width: 100px;
-  height: 60px;
-  border: 4px solid #5a3e2b; /* Dark brown border */
-  border-radius: 6px;
-  background-color: rgba(243, 229, 208, 0.8); /* Optional: subtle background */
-  box-shadow: 0 0 10px rgba(90, 62, 43, 0.5); /* Give it depth */
+  border: 2px solid var(--c1);
+  border-top: 0;
+  box-sizing: content-box;
+  border-radius: 0 0 40% 40%;
+  -webkit-mask: linear-gradient(#000 0 0) bottom / 4px 2px no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  background:
+    linear-gradient(var(--d, 0deg), var(--c2) 50%, #0000 0) bottom / 100% 205%,
+    linear-gradient(var(--c2) 0 0) center / 0 100%;
+  background-repeat: no-repeat;
+  animation: inherit;
+  animation-name: l5-1;
 }
 
-/* Book pages */
-.book__page {
-  position: absolute;
-  left: 50%;
-  top: -5px;
-  transform-origin: 0% 50%;
-  background: transparent;
-  width: 50px;
-  height: 60px;
-  border-top: 5px solid #8b5e3c;
-  border-bottom: 5px solid #8b5e3c;
-  border-right: 5px solid #8b5e3c;
-  animation: flip 1.2s infinite linear;
-  animation-fill-mode: forwards;
+.loader::after {
+  transform-origin: 50% calc(100% + 2px);
+  transform: scaleY(-1);
+  --s: 3px;
+  --d: 180deg;
 }
 
-.book__page:nth-child(1) {
-  z-index: -1;
-  animation-delay: 1.4s;
-}
-.book__page:nth-child(2) {
-  z-index: -2;
-  animation-delay: 2.8s;
-}
-.book__page:nth-child(3) {
-  z-index: -3;
-  animation-delay: 4.2s;
+@keyframes l5-0 {
+  80% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(0.5turn)
+  }
 }
 
-/* Flip animation */
-@keyframes flip {
-  0%   { transform: perspective(600px) rotateY(0deg); }
-  20%  { background: #d2b48c; }
-  30%  { transform: perspective(200px) rotateY(-90deg); background: #f3e5d0; }
-  55%  { opacity: 0; }
-  60%  { transform: perspective(200px) rotateY(-180deg); background: #f3e5d0; opacity: 1; }
-  100% { transform: perspective(200px) rotateY(-180deg); }
+@keyframes l5-1 {
+  10%, 70% {
+    background-size: 100% 205%, var(--s, 0) 100%
+  }
+  70%, 100% {
+    background-position: top, center
+  }
 }
 
-/* Flickering text */
+/* Flickering Text */
 .loader-text {
   margin-top: 1rem;
   font-family: 'Caveat', cursive;
   font-size: 1.5rem;
-  color: #5a3e2b;
+  color: #fff7e0;
   animation: flicker 1s infinite;
   letter-spacing: 1px;
+  text-shadow: 0 0 5px #000;
 }
 
 @keyframes flicker {
