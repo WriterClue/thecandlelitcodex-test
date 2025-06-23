@@ -157,15 +157,16 @@ body {
 
 .shelf-subtitle {
   font-family: 'Playfair Display', serif;
-  font-size: 0.85rem;
-  color: #fdf6d7;
+  font-size: 1rem;
+  color: #fff9e6;
   margin-top: 0.4rem;
   font-style: italic;
-  line-height: 1.4;
+  line-height: 1.5;
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
   white-space: normal;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Navigation Cards styled as vertical books */
