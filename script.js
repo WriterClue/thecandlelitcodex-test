@@ -25,5 +25,5 @@ window.addEventListener('load', () => {
     if (loader) {
       loader.style.display = 'none';
     }
-  }, 5000); // Adjust delay here (ms)
+  }, 10000); // Adjust delay here (ms)
 });
