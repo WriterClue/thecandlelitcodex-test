@@ -19,15 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
   observer.observe(trigger);
 });
 
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const loader = document.getElementById('loader-wrapper');
-    if (loader) {
-      loader.style.display = 'none';
-    }
-  }, 1000); // Adjust delay here (ms)
-});
-
     // Trigger pop-once animations
     document.querySelectorAll('.pop-once').forEach(el => {
       el.classList.add('visible');
