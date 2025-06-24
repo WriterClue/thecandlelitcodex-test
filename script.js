@@ -1,5 +1,3 @@
-
-// === Sticky Header Shrink on Scroll ===
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.contact-card');
   const trigger = document.getElementById('header-trigger');
@@ -21,27 +19,30 @@ document.addEventListener('DOMContentLoaded', function () {
   observer.observe(trigger);
 });
 
-// === Loader + Entrance Animations ===
 window.addEventListener('load', () => {
-  // --- [1] Delay Duration (in milliseconds)
-  const delay = 3000; // 3 seconds
-
   setTimeout(() => {
-    // --- [2] Remove Loader
     const loader = document.getElementById('loader-wrapper');
     if (loader) loader.remove();
 
-    // --- [3] Pop-in Animation for `.pop-once` Elements
     const popElements = document.querySelectorAll('.pop-once');
     popElements.forEach((el, i) => {
       setTimeout(() => {
         el.classList.add('visible');
-      }, i * 200); // Staggered animation
+      }, i * 200);
     });
 
-    // --- [4] Fade in Background Image
     const bg = document.querySelector('.background-image');
     if (bg) bg.classList.add('visible');
 
-  }, delay); // 👈 Delay before animations start
+    const scrollElements = document.querySelectorAll('.observe-pop');
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    scrollElements.forEach((el) => scrollObserver.observe(el));
+  }, 3000);
 });
