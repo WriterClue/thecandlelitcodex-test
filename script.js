@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
     if (loader) {
       loader.style.display = 'none';
     }
-  }, 3000); // Adjust delay here (ms)
+  }, 1000); // Adjust delay here (ms)
 });
 
     // Trigger pop-once animations
