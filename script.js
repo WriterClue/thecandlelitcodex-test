@@ -1,3 +1,5 @@
+
+// === Sticky Header Shrink on Scroll ===
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.contact-card');
   const trigger = document.getElementById('header-trigger');
@@ -19,25 +21,27 @@ document.addEventListener('DOMContentLoaded', function () {
   observer.observe(trigger);
 });
 
-    // Trigger pop-once animations
+// === Loader + Entrance Animations ===
+window.addEventListener('load', () => {
+  // --- [1] Delay Duration (in milliseconds)
+  const delay = 3000; // 3 seconds
 
-document.addEventListener('DOMContentLoaded', () => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      entry.target.classList.toggle('visible', entry.isIntersecting);
+  setTimeout(() => {
+    // --- [2] Remove Loader
+    const loader = document.getElementById('loader-wrapper');
+    if (loader) loader.remove();
+
+    // --- [3] Pop-in Animation for `.pop-once` Elements
+    const popElements = document.querySelectorAll('.pop-once');
+    popElements.forEach((el, i) => {
+      setTimeout(() => {
+        el.classList.add('visible');
+      }, i * 200); // Staggered animation
     });
-  }, {
-    threshold: 0.1,
-  });
 
-  document.querySelectorAll('.observe-pop').forEach(el => {
-    observer.observe(el);
-  });
+    // --- [4] Fade in Background Image
+    const bg = document.querySelector('.background-image');
+    if (bg) bg.classList.add('visible');
 
-  // Immediately mark any in-view elements as visible
-  document.querySelectorAll('.observe-pop').forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight) {
-      el.classList.add('visible');
-    }
-  });
+  }, delay); // 👈 Delay before animations start
 });
