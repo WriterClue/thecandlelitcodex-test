@@ -20,22 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
     // Trigger pop-once animations
-    document.querySelectorAll('.pop-once').forEach(el => {
-      el.classList.add('visible');
-    });
 
-  }, 2000); // 2 second delay
-});
-
-// SCROLL ANIMATIONS: Fade in/out on scroll
 document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
-      }
+      entry.target.classList.toggle('visible', entry.isIntersecting);
     });
   }, {
     threshold: 0.1,
@@ -43,5 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.observe-pop').forEach(el => {
     observer.observe(el);
+  });
+
+  // Immediately mark any in-view elements as visible
+  document.querySelectorAll('.observe-pop').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight) {
+      el.classList.add('visible');
+    }
   });
 });
