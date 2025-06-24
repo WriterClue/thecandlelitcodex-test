@@ -36,12 +36,14 @@ window.addEventListener('load', () => {
 
     const scrollElements = document.querySelectorAll('.observe-pop');
     const scrollObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+});
 
     scrollElements.forEach((el) => scrollObserver.observe(el));
   }, 3000);
