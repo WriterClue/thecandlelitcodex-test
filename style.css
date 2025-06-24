@@ -250,8 +250,8 @@ body {
   font-size: 1.6rem; /* larger but still one line */
   margin-bottom: 0.3rem;
   color: #fff9e2;
-  white-space: nowrap;
-  overflow: hidden;
+  white-space: normal;
+  overflow: visible;
   text-overflow: visible;
 }
 
