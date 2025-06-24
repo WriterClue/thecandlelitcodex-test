@@ -28,33 +28,29 @@ window.addEventListener('load', () => {
   }, 10000); // Adjust delay here (ms)
 });
 
-    // Trigger all sections to pop in
-    document.querySelectorAll('.pop-section').forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), i * 300); // staggered
+    // Trigger pop-once animations
+    document.querySelectorAll('.pop-once').forEach(el => {
+      el.classList.add('visible');
     });
 
-    // Reveal cards one by one
-    const cards = document.querySelectorAll('.container');
-    cards.forEach((card, i) => {
-      setTimeout(() => card.classList.add('visible'), 1500 + i * 300);
-    });
-
-  }, 2000); // 2 second loader duration
+  }, 2000); // 2 second delay
 });
 
-// Scroll-triggered re-animation
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    } else {
-      entry.target.classList.remove('visible');
-    }
+// SCROLL ANIMATIONS: Fade in/out on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.1,
   });
-}, {
-  threshold: 0.2
-});
 
-document.querySelectorAll('.pop-section, .container').forEach(el => {
-  observer.observe(el);
+  document.querySelectorAll('.observe-pop').forEach(el => {
+    observer.observe(el);
+  });
 });
