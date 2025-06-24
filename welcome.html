@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to The Codex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: black url('your-background.jpg') center/cover no-repeat;
+      color: #e6d8b4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: "Montserrat", sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      max-width: 80%;
+      text-align: center;
+      transform: scale(0.94);
+      animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+      line-height: 2;
+      font-size: 1.2rem;
+    }
+
+    @keyframes scale {
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    span {
+      display: inline-block;
+      opacity: 0;
+      filter: blur(4px);
+    }
+
+    @keyframes fade-in {
+      100% {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+
+    /* Button */
+    #enter-btn {
+      margin-top: 3rem;
+      padding: 0.6rem 1.5rem;
+      background: transparent;
+      border: 1px solid #e6d8b4;
+      color: #e6d8b4;
+      font-size: 1rem;
+      font-family: inherit;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 2s ease;
+    }
+
+    #enter-btn.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="animated-text">
+    <span>You</span>
+    <span>have</span>
+    <span>found</span>
+    <span>a</span>
+    <span>page</span>
+    <span>cluttered</span>
+    <span>within</span>
+    <span>the</span>
+    <span>internet.</span>
+    <span>Would</span>
+    <span>you</span>
+    <span>like</span>
+    <span>to</span>
+    <span>enter?</span>
+  </h1>
+
+  <button id="enter-btn">Enter</button>
+
+  <script>
+    const spans = document.querySelectorAll("h1 span");
+    const enterBtn = document.getElementById("enter-btn");
+
+    spans.forEach((span, index) => {
+      span.style.animation = `fade-in 0.8s ${0.2 * index}s forwards cubic-bezier(0.11, 0, 0.5, 0)`;
+    });
+
+    // Show button after last word
+    setTimeout(() => {
+      enterBtn.classList.add("show");
+    }, spans.length * 200 + 1000); // Total animation time + pause
+
+    // Redirect to next page
+    enterBtn.addEventListener("click", () => {
+      window.location.href = "Index.html"; // Change to your next file
+    });
+  </script>
+
+</body>
+</html>
