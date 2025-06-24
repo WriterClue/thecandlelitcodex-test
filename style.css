@@ -402,26 +402,31 @@ body {
   50% { opacity: 0.5; }
 }
 
-/* Pop-in animation */
-.pop-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+/* Pop animation (loaded once for sticky header) */ 
+.pop-once { 
+opacity: 0; 
+transform: translateY(40px); 
+animation: popFade 1s ease forwards; 
+animation-delay: 0.3s; }
+
+@keyframes popFade { 
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  } 
 }
 
-.pop-section.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Scroll-triggered pop-up animation */ 
+
+.observe-pop { 
+  opacity: 0; 
+  transform: translateY(40px);
+  transition: all 0.6s ease; 
+  will-change: opacity, transform; 
 }
 
-/* Pop-up cards */
-.container {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: all 0.5s ease-in-out;
+.observe-pop.visible { 
+  opacity: 1; transform: 
+  translateY(0); 
 }
 
-.container.visible {
-  opacity: 1;
-  transform: scale(1);
-}
